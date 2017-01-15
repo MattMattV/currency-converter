@@ -1,0 +1,43 @@
+<html>
+
+    <head>
+        <title>Currency converter</title>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-orange.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="change">
+                <label class="mdl-textfield__label" for="change">Taux de change</label>
+                <span class="mdl-textfield__error">numbers only</span>
+            </div>
+
+            <br />
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="euros">
+                <label class="mdl-textfield__label" for="euros">€UROS</label>
+                <span class="mdl-textfield__error">numbers only</span>
+            </div>
+
+            <br />
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="pounds">
+                <label class="mdl-textfield__label" for="pounds">£ivres</label>
+                <span class="mdl-textfield__error">numbers only</span>
+            </div>
+        </div>
+
+
+        <script src="node_modules/vue/dist/vue.min.js"></script>
+        <script src="node_modules/material-design-lite/material.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+
+</html>
