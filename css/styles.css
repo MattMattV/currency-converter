@@ -1,0 +1,31 @@
+#app {
+    background-color: #FF9800;
+    padding: 2rem;
+}
+
+#app-title {
+    font-family: surfingCapital;
+    letter-spacing: 0.2em;
+}
+
+.mdl-layout__header-row {
+    padding-left: 2rem;
+}
+
+.mdl-layout__header {
+    margin-bottom: 2rem;
+}
+
+#poundLabel, #euroLabel {
+    font-size: 20px;
+}
+
+#pounds, #euros {
+    font-size: 20px;
+    padding-top: 16px;
+}
+
+/*@font-face {
+    font-family: surfingCapital;
+    src: url('../fonts/SurfingCapital.ttf');
+}*/
