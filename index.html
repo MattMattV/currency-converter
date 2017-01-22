@@ -5,48 +5,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-orange.min.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css" />
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/input.css" />
     </head>
 
     <body>
         <div id="app">
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-                <header class="mdl-layout__header">
-                    <div class="mdl-layout__header-row">
-                        <span id="app-title" class="mdl-layout-title">Currency convertor</span>
-                    </div>
-                </header>
+            <div class="back-top-bar"></div>
 
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input v-on:keyup="convert" v-model="changeGBPToEUR" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="change">
-                    <label class="mdl-textfield__label" for="change">Taux de change GBP/EUR</label>
-                    <span class="mdl-textfield__error">numbers only</span>
+            <div class="top-bar">
+                <p class="top-bar-text">Currency converter</p>
+            </div>
+
+            <div class="input-container">
+                <div class="group">
+                    <input required type="number" v-model="changeGBPToEUR" v-on:keyup="convert">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Taux de change GBP/EUR</label>
                 </div>
 
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input v-on:keyup="convert" v-model="changeEURToGBP" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="change">
-                    <label class="mdl-textfield__label" for="change">Taux de change EUR/GBP</label>
-                    <span class="mdl-textfield__error">numbers only</span>
+                <div class="group">
+                    <input required type="number" v-model="changeEURToGBP" v-on:keyup="convert">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Taux de change EUR/GBP</label>
                 </div>
 
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input v-model="pounds" v-on:keyup="convertToEuros" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="pounds">
-                    <label class="mdl-textfield__label" id="poundLabel" for="pounds">£ivres</label>
-                    <span class="mdl-textfield__error">numbers only</span>
+                <div class="group">
+                    <input required type="number" v-model="pounds" v-on:keyup="convertToEuros">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Livres</label>
                 </div>
 
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input v-model="euros" v-on:keyup="convertToPounds" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="euros">
-                    <label class="mdl-textfield__label" id="euroLabel" for="euros">€uros</label>
-                    <span class="mdl-textfield__error">numbers only</span>
+                <div class="group">
+                    <input required type="number" v-model="euros" v-on:keyup="convertToPounds">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Euros</label>
                 </div>
             </div>
         </div>
-
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>

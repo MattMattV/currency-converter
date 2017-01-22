@@ -1,31 +1,30 @@
-#app {
+.back-top-bar {
     background-color: #FF9800;
-    padding: 2rem;
+    height: 4rem;
 }
 
-#app-title {
-    font-family: surfingCapital;
-    letter-spacing: 0.2em;
+.top-bar {
+    position: relative;
+    top: -2rem;
+    left: 2rem;
+
+    height: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    background-color: #607D8B;
 }
 
-.mdl-layout__header-row {
-    padding-left: 2rem;
+.top-bar-text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0.5rem;
 }
 
-.mdl-layout__header {
-    margin-bottom: 2rem;
+.input-container {
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
-
-#poundLabel, #euroLabel {
-    font-size: 20px;
-}
-
-#pounds, #euros {
-    font-size: 20px;
-    padding-top: 16px;
-}
-
-/*@font-face {
-    font-family: surfingCapital;
-    src: url('../fonts/SurfingCapital.ttf');
-}*/
